@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Lunéra</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">LUNÉRA</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Collection</a></li>
+      <li><a href="add-product.html">Add Product</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <li><a href="checkout.html" class="active">Checkout</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <h2 class="section-title">Checkout</h2>
+    <p class="section-subtitle">Complete your purchase</p>
+
+    <div id="checkout-message"></div>
+
+    <div class="checkout-layout">
+      <div class="checkout-cart-box">
+        <h3 class="section-subtitle" style="margin-bottom: 20px;">Order Summary</h3>
+        <div id="cart-items">
+          <p class="loading">Loading cart...</p>
+        </div>
+      </div>
+
+      <div class="checkout-form-box">
+        <h3 class="section-subtitle" style="margin-bottom: 20px;">Customer Information</h3>
+
+        <div class="form-group">
+          <label for="customerName">Full Name</label>
+          <input type="text" id="customerName" />
+        </div>
+
+        <div class="form-group">
+          <label for="customerEmail">Email Address</label>
+          <input type="email" id="customerEmail" />
+        </div>
+
+        <div id="paypal-button-container" style="margin-top: 10px;"></div>
+
+        <div style="text-align:center; color:#888; font-size:12px; letter-spacing:2px; margin:16px 0;">
+          OR
+        </div>
+
+        <a href="checkout-cancel.html" class="btn-dark" style="width:100%; text-align:center; display:inline-block;">
+          Cancel Payment
+        </a>
+
+        <p style="text-align:center; font-size:11px; color:#888; margin-top:12px; letter-spacing:1px;">
+          Sandbox payment for demonstration purposes
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p style="font-size:24px; color:#C9A84C; letter-spacing:6px; margin-bottom:16px;">LUNÉRA</p>
+    <p>© 2026 Lunéra. All rights reserved.</p>
+  </footer>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=ASe8SAVz42oe3HgGbGIv3MVAkBJN-_g4r7cZG7xkOlrrAeuIwmjBn2cYUpN3YKyAEcDcwkbxAbKNaduQ&currency=EUR"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

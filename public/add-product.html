@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Product — Lunéra</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">LUNÉRA</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Collection</a></li>
+      <li><a href="add-product.html">Add Product</a></li>
+      <li><a href="orders.html">Orders</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <h2 class="section-title">Add New Product</h2>
+    <p class="section-subtitle">Create a new jewelry or accessory item</p>
+
+    <div class="form-container">
+      <div id="message-box"></div>
+
+      <form id="product-form">
+        <div class="form-group">
+          <label for="name">Product Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price (€)</label>
+          <input type="number" id="price" name="price" step="0.01" required />
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="">Select category</option>
+            <option value="rings">Rings</option>
+            <option value="necklaces">Necklaces</option>
+            <option value="bracelets">Bracelets</option>
+            <option value="earrings">Earrings</option>
+            <option value="bags">Bags</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="material">Material</label>
+          <select id="material" name="material" required>
+            <option value="">Select material</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="rose gold">Rose Gold</option>
+            <option value="stainless steel">Stainless Steel</option>
+            <option value="leather">Leather</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Image Path</label>
+          <input
+            type="text"
+            id="image"
+            name="image"
+            placeholder="images/gold-ring.jpg"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="stock">Stock</label>
+          <input type="number" id="stock" name="stock" min="1" required />
+        </div>
+
+        <button type="submit" class="btn-primary">Add Product</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p style="font-size:24px; color:#C9A84C; letter-spacing:6px; margin-bottom:16px;">LUNÉRA</p>
+    <p>© 2026 Lunéra. All rights reserved.</p>
+  </footer>
+
+  <script src="js/add-product.js"></script>
+</body>
+</html>

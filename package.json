@@ -1,0 +1,21 @@
+{
+  "name": "lunera-jewelry-store",
+  "version": "1.0.0",
+  "description": "Lunéra Jewelry & Accessories E-Commerce App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collection — Lunéra</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">LUNÉRA</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Collection</a></li>
+      <li><a href="add-product.html">Add Product</a></li>
+      <li><a href="orders.html">Orders</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <h2 class="section-title">Our Collection</h2>
+    <p class="section-subtitle">Discover elegant pieces by category</p>
+
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Search for a piece..."
+      />
+      <button class="search-btn" id="search-btn">🔍</button>
+    </div>
+
+    <div style="display: flex; gap: 12px; margin-bottom: 40px; flex-wrap: wrap;">
+      <button class="btn-dark" data-category="all">All</button>
+      <button class="btn-primary" data-category="rings">Rings</button>
+      <button class="btn-primary" data-category="necklaces">Necklaces</button>
+      <button class="btn-primary" data-category="bracelets">Bracelets</button>
+      <button class="btn-primary" data-category="earrings">Earrings</button>
+      <button class="btn-primary" data-category="bags">Bags</button>
+    </div>
+
+    <div class="products-grid" id="products-container">
+      <div class="loading">Loading collection...</div>
+    </div>
+  </section>
+
+  <div
+    id="product-modal"
+    style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:999; align-items:center; justify-content:center;"
+  >
+    <div style="background:#FAFAFA; max-width:600px; width:90%; padding:50px; position:relative;">
+      <button
+        id="close-modal"
+        style="position:absolute; top:20px; right:20px; background:none; border:none; font-size:24px; cursor:pointer;"
+      >
+        ✕
+      </button>
+
+      <p id="modal-category" class="product-card-category"></p>
+      <h2 id="modal-name" style="font-size:36px; margin-bottom:16px;"></h2>
+      <p id="modal-price" style="font-size:22px; color:#C9A84C; margin-bottom:24px;"></p>
+      <p id="modal-material" style="font-size:13px; color:#888; margin-bottom:20px;"></p>
+      <p id="modal-description" style="color:#666; line-height:1.8; margin-bottom:24px;"></p>
+      <p id="modal-stock" style="font-size:12px; color:#888; text-transform:uppercase; margin-bottom:32px;"></p>
+
+      <a id="modal-detail-link" href="#" class="btn-primary" style="display:block; text-align:center;">
+        View Details
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p style="font-size:24px; color:#C9A84C; letter-spacing:6px; margin-bottom:16px;">LUNÉRA</p>
+    <p>© 2026 Lunéra. All rights reserved.</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+</body>
+</html>
